@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+*.class
+*.iml
+.idea/
+.gradle/
+build/
+android/local.properties
+buzDep.json
+package-lock.json
+platformDep.json
