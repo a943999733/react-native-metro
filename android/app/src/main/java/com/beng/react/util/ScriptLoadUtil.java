@@ -26,7 +26,7 @@ public class ScriptLoadUtil {
     /**
      * set this value when debug,you can set BuildConfig.DEBUG if need
      */
-    public static final boolean MULTI_DEBUG = false;//需要debug的时候设置成true,你也可以设置成跟BuildConfig.DEBUG一致
+    public static final boolean MULTI_DEBUG = true;//需要debug的时候设置成true,你也可以设置成跟BuildConfig.DEBUG一致
     private static final Set<String> sLoadedScript = new HashSet<>();
 
     public static void recreateReactContextInBackgroundInner(ReactInstanceManager manager) {

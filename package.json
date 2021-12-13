@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "mergeIndex": "node tools/multiDebug.js",
+    "prestart": "node tools/multiDebug.js && lsof -i tcp:8081 | grep node | awk '{print $2}' | xargs kill -9",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
