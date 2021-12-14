@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Image, requireNativeComponent, StyleSheet, Text, ScrollView} from 'react-native';
+import {Image, requireNativeComponent, StyleSheet, Text, View} from 'react-native';
 
 const instructions = '业务1设置了一个全局变量供业务2读取';
 
@@ -19,13 +19,13 @@ export default class App extends Component<Props> {
   }
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
         <Text style={styles.welcome}>欢迎来到业务1的世界！</Text>
-        <Image source={require('./imgs/index1.jpg')}/>
+        <Image source={require('../../imgs/index1.jpg')}/>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
         {/*<BundleView style={{width:373,height:400}} />*/}
-      </ScrollView>
+      </View>
     );
   }
 }
