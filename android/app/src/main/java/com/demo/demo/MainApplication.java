@@ -2,6 +2,7 @@ package com.demo.demo;
 
 import android.app.Application;
 
+import com.beng.react.rn.bundle.RNBundlePackage;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -41,7 +42,8 @@ public class MainApplication extends Application implements ReactApplication {
                     new RNGestureHandlerPackage(),
                     new ReanimatedPackage(),
                     new SafeAreaContextPackage(),
-                    new RNScreensPackage()
+                    new RNScreensPackage(),
+                    new RNBundlePackage()
             );
         }
 

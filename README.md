@@ -27,9 +27,9 @@ iOS和Android都有加载多bundle实例，经测试稳定可靠
 
     1、拷贝除了demo文件夹下的所有代码文件到项目
     
-    2、根据自己的需要自定义platformDep.js和platform57.config.js，这里确定基础包包含的js module
+    2、根据自己的需要自定义platform.js和platform.config.js，这里确定基础包包含的js module
     
-    3、根据自己的需要确定你的业务入口js和buz57.config.js，这里确定业务包包含的js代码
+    3、根据自己的需要确定你的业务入口js和buz.config.js，这里确定业务包包含的js代码
     
     4、打包：根据底下给出的打包命令打包
     
@@ -124,6 +124,54 @@ iOS和Android都有加载多bundle实例，经测试稳定可靠
 .
 ├── App.js               业务界面1
 ├── App2.js              业务界面2
+├── App3.js              业务界面3
+├── LICENSE
+├── README.md
+├── android              android项目目录
+├── app.json 
+├── buzDep.json        UI打包中，打业务包的中间产物，这里面包含的是当前业务包的依赖
+├── buz.config.js      业务包的打包配置
+├── buz-ui.config.js     UI打业务包配置
+├── index.js             业务1入口js
+├── index2.js            业务2入口js
+├── index3.js            业务3入口js
+├── ios ios目录
+├── multibundler         包含着debug配置和公用方法模块
+├── multiDebug.js        debug node命令行工具
+├── multiDebugEntry.js   debug生成的rn调试入口，里面拼接着需要调试模块的入口代码     
+├── multibundler_cmd.txt 打包命令
+├── package.json
+├── platform-ui.config.js UI打基础包配置
+├── platformDep-ui.js    UI打基础包入口
+├── platform.config.js 基础包打包配置
+├── platformDep.js       基础包打包入口
+├── platform-import.js   UI打包中生成的基础包依赖的模块import代码
+└── platformDep.json     UI打包中生成的基础包所依赖模块的配置文件
+```
+
+```
+.
+├── index.js              debug入口文件，命令生成
+├—— biz                   所有业务逻辑js代码
+│   ├──biz1               业务1
+│   │  ├── App.js
+│   │  └── index.hs
+│   ├──biz2               业务2
+│   │  ├── App.js
+│   │  └── index.hs
+│   └──biz3               业务3
+│      ├── App.js
+│      └── index.hs
+│
+├── multi-bundle_config      分包配置环境
+│   ├──buz.config.js        业务包的打包配置
+│   ├── buz-ui.config.js     UI打业务包配置
+│   ├── DegbugBuzEntrys.json    debug配置路径
+│   ├── getModuleId.js        通过自增长的index来确定moduleID
+│   ├── ModuleIdConfig.json     起始的moduleId
+│   ├── platformconfig.config.js     基础包打包配置
+│   ├── platformconfig.entry.js     基础包打包入口
+│   ├── platformconfig.ui.js      UI打基础包入口
 ├── App3.js              业务界面3
 ├── LICENSE
 ├── README.md

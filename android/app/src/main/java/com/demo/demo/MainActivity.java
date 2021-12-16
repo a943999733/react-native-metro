@@ -75,12 +75,22 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
         });
 
 
-        RnBundle bundle = new RnBundle();
-        bundle.scriptType = RnBundle.ASSET;
-        bundle.scriptPath = "index.android.bundle";
-        bundle.scriptUrl = "index.android.bundle";
-        bundle.mainComponentName = "reactnative_multibundler";
-        ((RNBundleView)findViewById(R.id.testFrame)).setRnBundle(bundle);
+//        RnBundle bundle = new RnBundle();
+//        bundle.scriptType = RnBundle.ASSET;
+//        bundle.scriptPath = "index.android.bundle";
+//        bundle.scriptUrl = "index.android.bundle";
+//        bundle.mainComponentName = "reactnative_multibundler";
+//        ((RNBundleView)findViewById(R.id.testFrame)).setRnBundle(bundle);
+
+//        RnBundle rnbundle = new RnBundle();
+//        rnbundle.scriptType = RnBundle.ASSET;
+//        rnbundle.scriptPath = "index.android.bundle";
+//        rnbundle.scriptUrl = "index.android.bundle";
+//        rnbundle.mainComponentName = "reactnative_multibundler";
+//
+//        Intent intent = new Intent(MainActivity.this, AsyncReactActivity.class);
+//        intent.putExtra(AsyncReactActivity.PARAM_KEY_RN_BUNDLE, (Parcelable) rnbundle);
+//        startActivity(intent);
     }
 
     @Override

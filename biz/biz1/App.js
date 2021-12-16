@@ -16,6 +16,7 @@ type Props = {};
 export default class App extends Component<Props> {
   componentDidMount(){
     global.buz1Param = '业务2你好，我是业务1，我们是在同一个js环境下';
+    this.setState()
   }
   render() {
     return (
@@ -24,7 +25,9 @@ export default class App extends Component<Props> {
         <Image source={require('../../imgs/index1.jpg')}/>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        {/*<BundleView style={{width:373,height:400}} />*/}
+        <View style={{width:375,height:100}}>
+          {/*<BundleView setRnBundle={{}} style={{width:373,height:100}} />*/}
+        </View>
       </View>
     );
   }
