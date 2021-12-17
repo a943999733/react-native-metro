@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
 
                 RnBundle rnbundle = new RnBundle();
                 rnbundle.scriptType = RnBundle.ASSET;
-                rnbundle.scriptPath = "index.android.bundle";
-                rnbundle.scriptUrl = "index.android.bundle";
+                rnbundle.scriptPath = "biz1.android.bundle";
+                rnbundle.scriptUrl = "biz1.android.bundle";
                 rnbundle.mainComponentName = "reactnative_multibundler";
 
                 Intent intent = new Intent(MainActivity.this, AsyncReactActivity.class);
@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
             public void onClick(View v) {//点击进入rn业务2
                 RnBundle rnbundle = new RnBundle();
                 rnbundle.scriptType = RnBundle.NETWORK;
-                rnbundle.scriptPath = "index2.android.bundle";
-                rnbundle.scriptUrl = "https://github.com/smallnew/react-native-multibundler/raw/master/remotebundles/index2.android.bundle.zip";
-                rnbundle.scriptUrl = "http://10.16.1.1:8080/static/index2.android.bundle.zip";
+                rnbundle.scriptPath = "biz2.android.bundle";
+                rnbundle.scriptUrl = "https://github.com/smallnew/react-native-multibundler/raw/master/remotebundles/biz2.android.bundle.zip";
+                rnbundle.scriptUrl = "http://10.16.1.1:8080/static/biz2.android.bundle.zip";
                 rnbundle.mainComponentName = "reactnative_multibundler2";
                 Intent intent = new Intent(MainActivity.this, AsyncReactActivity.class);
                 intent.putExtra(AsyncReactActivity.PARAM_KEY_RN_BUNDLE, (Parcelable) rnbundle);
@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
 
                 RnBundle rnbundle = new RnBundle();
                 rnbundle.scriptType = RnBundle.ASSET;
-                rnbundle.scriptPath = "index3.android.bundle";
-                rnbundle.scriptUrl = "index3.android.bundle";
+                rnbundle.scriptPath = "biz3.android.bundle";
+                rnbundle.scriptUrl = "biz3.android.bundle";
                 rnbundle.mainComponentName = "reactnative_multibundler3";
 
                 Intent intent = new Intent(MainActivity.this, AsyncReactActivity.class);
@@ -77,15 +77,15 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
 
 //        RnBundle bundle = new RnBundle();
 //        bundle.scriptType = RnBundle.ASSET;
-//        bundle.scriptPath = "index.android.bundle";
-//        bundle.scriptUrl = "index.android.bundle";
+//        bundle.scriptPath = "biz1.android.bundle";
+//        bundle.scriptUrl = "biz1.android.bundle";
 //        bundle.mainComponentName = "reactnative_multibundler";
 //        ((RNBundleView)findViewById(R.id.testFrame)).setRnBundle(bundle);
 
 //        RnBundle rnbundle = new RnBundle();
 //        rnbundle.scriptType = RnBundle.ASSET;
-//        rnbundle.scriptPath = "index.android.bundle";
-//        rnbundle.scriptUrl = "index.android.bundle";
+//        rnbundle.scriptPath = "biz1.android.bundle";
+//        rnbundle.scriptUrl = "biz1.android.bundle";
 //        rnbundle.mainComponentName = "reactnative_multibundler";
 //
 //        Intent intent = new Intent(MainActivity.this, AsyncReactActivity.class);

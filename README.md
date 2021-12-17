@@ -144,7 +144,7 @@ iOS和Android都有加载多bundle实例，经测试稳定可靠
 ├── platform-ui.config.js UI打基础包配置
 ├── platformDep-ui.js    UI打基础包入口
 ├── platform.config.js 基础包打包配置
-├── platformDep.js       基础包打包入口
+├── platformDep.config.js       基础包打包入口
 ├── platform-import.js   UI打包中生成的基础包依赖的模块import代码
 └── platformDep.json     UI打包中生成的基础包所依赖模块的配置文件
 ```
@@ -192,7 +192,7 @@ iOS和Android都有加载多bundle实例，经测试稳定可靠
 ├── platform-ui.config.js UI打基础包配置
 ├── platformDep-ui.js    UI打基础包入口
 ├── platform.config.js 基础包打包配置
-├── platformDep.js       基础包打包入口
+├── platformDep.config.js       基础包打包入口
 ├── platform-import.js   UI打包中生成的基础包依赖的模块import代码
 └── platformDep.json     UI打包中生成的基础包所依赖模块的配置文件
 ```
@@ -233,13 +233,44 @@ iOS和Android都有加载多bundle实例，经测试稳定可靠
 打包命令如下：
 ## android
 ### 打android基础包
-node ./node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file platformDep.js --bundle-output ./android/app/src/main/assets/platform.android.bundle --assets-dest android/app/src/main/res/ --config /{你的绝对路径}/platform.config.js
+node ./node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file ./multi_bundle_config/platform.entry.js --bundle-output ./android/app/src/main/assets/platform.android.bundle --assets-dest android/app/src/main/res/ --config ./multi_bundle_config/platform.config.js
 ### 打android业务包
 node ./node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ --config /{你的绝对路径}/buz.config.js
+node ./node_modules/react-native/local-cli/cli.js bundle \
+--platform android  \
+--dev false \
+--entry-file ./multi_bundle_config/platform.entry.js \
+--config platform.config.js \
+--bundle-output ./android/app/src/main/assets/platform.android.bundle \
+--assets-dest android/app/src/main/res/ \
+&&
+node ./node_modules/react-native/local-cli/cli.js bundle \
+--platform android  \
+--dev false \
+--entry-file ./biz/biz1/index.js \
+--config buz.config.js \
+--bundle-output ./android/app/src/main/assets/biz1.android.bundle \
+--assets-dest android/app/src/main/res/ \
+&&
+node ./node_modules/react-native/local-cli/cli.js bundle \
+--platform android  \
+--dev false \
+--entry-file ./biz/biz2/index.js \
+--config buz.config.js \
+--bundle-output ./android/app/src/main/assets/biz2.android.bundle \
+--assets-dest android/app/src/main/res/ \
+&&
+node ./node_modules/react-native/local-cli/cli.js bundle \
+--platform android  \
+--dev false \
+--entry-file ./biz/biz3/index.js \
+--config buz.config.js \
+--bundle-output ./android/app/src/main/assets/biz3.android.bundle \
+--assets-dest android/app/src/main/res/
 
 
 ## iOS
 ### 打iOS基础包
-node ./node_modules/react-native/local-cli/cli.js bundle --platform ios --dev false --entry-file platformDep.js --bundle-output ./ios/platform.ios.bundle --assets-dest ./ios/ --config /{你的绝对路径}/platform.config.js
+node ./node_modules/react-native/local-cli/cli.js bundle --platform ios --dev false --entry-file platformDep.config.js --bundle-output ./ios/platform.ios.bundle --assets-dest ./ios/ --config /{你的绝对路径}/platform.config.js
 ### 打iOS业务包
 node ./node_modules/react-native/local-cli/cli.js bundle --platform ios --dev false --entry-file index.js --bundle-output ./ios/index.ios.bundle --assets-dest ./ios/ --config /{你的绝对路径}/buz.config.js

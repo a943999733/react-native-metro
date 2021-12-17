@@ -1,10 +1,11 @@
 const pathSep = require('path').sep;
 const fs=require("fs");
 const moduleMapDir = "multi_bundle_map";
-const getModuleId = require('./getModulelId').getModuleId;
-const useIndex = require('./getModulelId').useIndex;
-let entry = "platform.entry.js";//打包的入口，保证UI打包和命令行打包使用同一个入口名称
 
+const getModuleId = require('./multi_bundle_config/getModulelId').getModuleId;
+
+const useIndex = require('./multi_bundle_config/getModulelId').useIndex;
+let entry = "platform.entry.js";//打包的入口，保证UI打包和命令行打包使用同一个入口名称
 function createModuleIdFactory() {
     const projectRootPath = __dirname;//获取当前目录，__dirname是nodejs提供的变量
     return path => {

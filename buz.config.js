@@ -1,7 +1,7 @@
 const pathSep = require('path').sep;
-const plaformModules = require('./multibundler/platformNameMap.json');
-const getModuleId = require('./multibundler/getModulelId').getModuleId;
-const useIndex = require('./multibundler/getModulelId').useIndex;
+const plaformModules = require('./multi_bundle_map/platformNameMap.json');
+const getModuleId = require('./multi_bundle_config/getModulelId').getModuleId;
+const useIndex = require('./multi_bundle_config/getModulelId').useIndex;
 
 let entry;
 
